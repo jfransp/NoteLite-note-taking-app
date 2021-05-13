@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainScreenFragment">
+    <fragment
+        android:id="@+id/mainScreenFragment"
+        android:name="com.example.notelite.ui.mainscreen.MainScreenFragment"
+        android:label="NoteLite"
+        tools:layout="@layout/fragment_mainscreen">
+        <action
+            android:id="@+id/action_mainScreenFragment_to_noteScreenFragment"
+            app:destination="@id/noteScreenFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_newNoteScreenFragment"
+            app:destination="@id/newNoteScreenFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/noteScreenFragment"
+        android:name="com.example.notelite.ui.notescreen.NoteScreenFragment"
+        android:label="NoteLite"
+        tools:layout="@layout/fragment_note_screen">
+        <action
+            android:id="@+id/action_noteScreenFragment_to_noteEditScreenFragment"
+            app:destination="@id/noteEditScreenFragment" />
+        <argument
+            android:name="note"
+            app:argType="com.example.notelite.data.NoteEntity" />
+        <action
+            android:id="@+id/action_noteScreenFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/noteEditScreenFragment"
+        android:name="com.example.notelite.ui.editnotescreen.EditNoteScreenFragment"
+        android:label="NoteLite"
+        tools:layout="@layout/fragment_edit_note_screen">
+        <action
+            android:id="@+id/action_noteEditScreenFragment_to_noteScreenFragment"
+            app:destination="@id/noteScreenFragment"
+            app:popUpTo="@id/mainScreenFragment" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="dateofcreation"
+            app:argType="string" />
+        <argument
+            android:name="text"
+            app:argType="string" />
+        <argument
+            android:name="timeofcreation"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/newNoteScreenFragment"
+        android:name="com.example.notelite.ui.newnotescreen.NewNoteScreenFragment"
+        android:label="New Note"
+        tools:layout="@layout/fragment_new_note_screen">
+        <action
+            android:id="@+id/action_newNoteScreenFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+</navigation>

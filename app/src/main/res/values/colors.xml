@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="primary_color">#FFB9BAA3</color>
+    <color name="secondary_color">#FFD6D5C9</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="app_background_color">#E5E5DC</color>
+    <color name="no_notes_message_text_color">#CCCCB8</color>
+    <color name="new_note_button_background_color">#BABAA1</color>
+    <color name="item_note_background_color">#CBCBB9</color>
+    <color name="search_bar_textbox_color">#D4D4C4</color>
+    <color name="note_text_color">#5E5E45</color>
+    <color name="item_note_textbox_color">#40434E</color>
+    <color name="title_text_color">#273F33</color>
+    <color name="date_text_color">#898C69</color>
+    <color name="transparent">#55000000</color>
+</resources>

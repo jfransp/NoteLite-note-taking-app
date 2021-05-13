@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background_color">
+
+    <EditText
+        android:id="@+id/note_title"
+        android:layout_width="0dp"
+        android:hint="@string/title_hint_text"
+        android:layout_height="wrap_content"
+        android:paddingVertical="5dp"
+        android:paddingHorizontal="10dp"
+        android:textSize="20sp"
+        android:textColor="@color/title_text_color"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        tools:text="NoteTitle"
+        android:background="@drawable/rounded_corner_bar"
+        app:layout_constraintBottom_toTopOf="@id/note_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/note_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:hint="@string/note_hint_text"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/rounded_corner_bar"
+        android:gravity="start|top"
+        android:layout_marginBottom="15dp"
+        android:padding="5dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text=""
+        android:textColor="@color/title_text_color"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/add_note_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/note_title"
+        tools:text="Note Text" />
+
+    <Button
+        android:id="@+id/add_note_button"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/new_note_button_background"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/add_button_text"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:textAllCaps="false"
+        android:textColor="@color/note_text_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

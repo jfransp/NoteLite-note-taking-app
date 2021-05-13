@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">NoteLite</string>
+    <string name="no_notes_message">you don\'t have any notes yet. get started!</string>
+    <string name="new_note_button_text">new note</string>
+    <string name="confirmation_dialog_message">are you sure you want to delete this note?</string>
+    <string name="confirmation_dialog_cancel_button_text">cancel</string>
+    <string name="confirmation_dialog_confirm_button_text">confirm</string>
+    <string name="save_button_text">save</string>
+    <string name="title_hint_text">choose a title</string>
+    <string name="note_hint_text">write something!</string>
+    <string name="add_button_text">add</string>
+    <string name="edit_button_text">edit</string>
+    <string name="delete_button_text">delete</string>
+    <string name="sort_option_text">sort</string>
+    <string name="sort_title_text">sort by title</string>
+    <string name="sort_time_text">sort by date and time</string>
+    <string name="search_bar_title_text">search</string>
+</resources>
