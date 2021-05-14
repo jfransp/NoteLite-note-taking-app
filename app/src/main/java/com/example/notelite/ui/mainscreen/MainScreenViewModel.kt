@@ -38,8 +38,9 @@ class MainScreenViewModel @Inject constructor(
         dao.getNotes(query, filterPreferences.sortOrder)
     }
 
-    //Converts notes data into livedata for appropriate lifecycle awareness
+    //Converts notes data and searchQuery into livedata for appropriate lifecycle awareness
     val notes = notesFlow.asLiveData()
+    val searchquery = searchQuery.asLiveData()
 
     //Updates sort order on datastore
     fun onSortOrderSelected(sortOrder: SortOrder) = viewModelScope.launch {

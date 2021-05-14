@@ -17,6 +17,7 @@ import com.example.notelite.data.SortOrder
 import com.example.notelite.databinding.FragmentMainscreenBinding
 import com.example.notelite.util.onQueryTextChanged
 import dagger.hilt.android.AndroidEntryPoint
+import kotlin.math.absoluteValue
 
 @AndroidEntryPoint
 class MainScreenFragment: Fragment(R.layout.fragment_mainscreen),
@@ -49,14 +50,26 @@ class MainScreenFragment: Fragment(R.layout.fragment_mainscreen),
             notesAdapter.submitList(noteList)
         }
 
-        //Displays a message in case of an empty recyclerview (no notes on the database) - doesn't work
-        //when taken care of inside the same observer that updates the recyclerview. The message first appears
-        //visible when you first start the app with pre-inserted dummy data in the database for some reason,
-        //disappearing once you restart the app, but shouldn't be a problem with normal usage
+
+        //Changes the empty recyclerview message in case the user gets an empty note list as a result
+        //of a search query - the strings have to be hard coded here for some reason, referencing the string
+        //resources was getting bugs, it gives some warnings but works
+        viewModel.searchquery.observe(viewLifecycleOwner) { currentSearchQuery ->
+            val noNotesMessage = binding.emptyRecyclerviewMessage
+            if (currentSearchQuery != "") noNotesMessage.text = "no matching results" else {
+                noNotesMessage.text = "you don't have any notes yet. get started!"
+            }
+        }
+
+        //Displays a message in case of an empty recyclerview (no notes on the database or no results from
+        //search query).The message first appears visible when you first start the app with pre-inserted
+        //dummy data in the database for some reason, disappearing once you restart the app, but shouldn't
+        //be a problem with normal usage
         viewModel.notes.observe(viewLifecycleOwner) { noteList ->
             val noNotesMessage = binding.emptyRecyclerviewMessage
-            if (noteList.isEmpty()) {
-                noNotesMessage.isVisible = true
+            when (noteList.isEmpty()) {
+                true -> noNotesMessage.isVisible = true
+                false -> noNotesMessage.isVisible = false
             }
         }
 

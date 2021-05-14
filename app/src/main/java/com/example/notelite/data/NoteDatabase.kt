@@ -24,8 +24,8 @@ abstract class NoteDatabase: RoomDatabase() {
             val dao = database.get().dao()
 
             //Applies dummy data for testing purposes - just some random public figure's names.
-            //Remove comment if you wish to use the pre-set data
-            applicationScope.launch {
+            //Remove comment if you wish to use this pre-set data
+            /*applicationScope.launch {
                 dao.addNote(NoteEntity(
                     title = "Elon Musk",
                     text = "Elon Reeve Musk is a business magnate, industrial designer, and engineer." +
@@ -89,7 +89,7 @@ abstract class NoteDatabase: RoomDatabase() {
                             " since May 2007. His first nomination for a Grammy came in 2021 for his special" +
                             " Paper Tiger."
                 ))
-            }
+            }*/
         }
     }
 }
