@@ -1,14 +1,14 @@
 # NoteLite-note-taking-app
 Lightweight note taking app developed in MVVM using Room, Coroutines, Dagger Hilt, DataStore, ViewBinding, Flow, and general JetPack navigation, lifecycle and architecture components.
 
-# Some more specific implementations:
+# Some specific implementations:
 RecyclerView
 
 Use of Safe Args plugin for fragment communication
 
 Dialog Screen with custom design
 
-ActionBar
+ActionBar with search view, sorting options and an up button
 
 Facade pattern for integration between recyclerview adapter and fragment code
 
