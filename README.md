@@ -1,5 +1,5 @@
 # NoteLite-note-taking-app
-Lightweight note taking app developed in MVVM using Room, Coroutines, Dagger Hilt, DataStore, Flow and JetPack navigation and lifecycle components.
+Lightweight note taking app developed in MVVM using Room, Coroutines, Dagger Hilt, DataStore, ViewBinding, Flow and JetPack navigation and lifecycle components.
 
 # Some more specific implementations:
 RecyclerView
