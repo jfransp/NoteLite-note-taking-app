@@ -62,8 +62,8 @@ class MainScreenFragment: Fragment(R.layout.fragment_mainscreen),
         }
 
         //Displays a message in case of an empty recyclerview (no notes on the database or no results from
-        //search query).The message first appears visible when you first start the app with pre-inserted
-        //dummy data in the database for some reason, disappearing once you restart the app, but shouldn't
+        //search query). For some reason the message first appears visible when you install the app with the
+        //pre-inserted dummy data from the database code, disappearing once you restart the app, but shouldn't
         //be a problem with normal usage
         viewModel.notes.observe(viewLifecycleOwner) { noteList ->
             val noNotesMessage = binding.emptyRecyclerviewMessage
